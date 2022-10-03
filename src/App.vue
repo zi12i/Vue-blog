@@ -24,16 +24,18 @@
     </div>
   </div>
 </nav>
+  <div class="mainPage">
+    <router-link to="/">홈 페이지</router-link>
+    <router-link to="/list">리스트페이지</router-link>
+  <!-- <List :블로그글="블로그글"/> -->
+    <router-view :블로그글="블로그글"></router-view>
+  </div>
 
-<div class="mainPage">
-  <h1>지미블로그~~~</h1>
-  <List :블로그글="블로그글"/>
-</div>
 </div>
 </template>
 
 <script>
-    import List from '@/components/list.vue'
+    // import List from '@/components/list.vue'
     import blog from '@/assets/blog.js'
 
     export default {
@@ -43,9 +45,9 @@
           블로그글 : blog
         }
       },
-      components: {
-        List: List,
-      }
+      // components: {
+      //   List: List,
+      // }
     }
 </script>
 
