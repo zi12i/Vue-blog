@@ -1,11 +1,11 @@
 <template>
 <div class="card">
   <div class="card-header">
-    여기에 제목
+    {{ 블로그글[$route.params.id].title}}
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
-      <p>여기에 내용</p>
+      <p>{{ 블로그글[$route.params.id].content}}</p>
     </blockquote>
   </div>
 </div>
@@ -14,6 +14,9 @@
 <script>
     export default {
         name: 'Detail',
+        props: {
+          블로그글 : Array,
+        }
     }
 </script>
 
