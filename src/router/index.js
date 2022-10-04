@@ -4,6 +4,8 @@ import VueRouter from "vue-router";
 import List from "../components/list.vue"
 import Home from "../components/Home.vue"
 import Detail from "../components/Detail.vue"
+import Author from "../components/Author.vue"
+import Comment from "../components/Comment.vue"
 
 Vue.use(VueRouter);
 
@@ -18,8 +20,18 @@ const routes = [
     component: List,
   },
   {
-    path: "/detail/:id(\\d+)",
+    path: "/detail/:id",
     component: Detail,
+    children: [
+      {
+        path: "author",
+        component: Author
+      },
+      {
+        path: "comment",
+        component: Comment
+      }
+    ]
   },
 ];
 

@@ -8,6 +8,7 @@
       <p>{{ 블로그글[$route.params.id].content}}</p>
     </blockquote>
   </div>
+  <router-view></router-view>
 </div>
 </template>
 
